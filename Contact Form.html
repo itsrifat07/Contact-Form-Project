@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Contact Form</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+      }
+      .top-nav {
+        background-color: #5aa899;
+        overflow: hidden;
+        padding: 10px;
+      }
+      .top-nav a {
+        color: white;
+        padding: 14px 20px;
+        text-decoration: none;
+        float: left;
+      }
+      .side-menu {
+        background-color: purple;
+        color: white;
+        width: 200px;
+        height: 630px;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        padding: 20px 10px;
+      }
+      .side-menu a {
+        display: block;
+        color: white;
+        margin: 10px 0;
+        text-decoration: none;
+      }
+      .main {
+        position: relative;
+        left: 220px;
+      }
+      .form-container {
+        background-color: #f9f9f9;
+        margin: 20px;
+      }
+      .form-header {
+        background-color: #5aa899;
+        color: white;
+        padding: 15px;
+        text-align: center;
+        font-size: 24px;
+      }
+      form,
+      fieldset {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+      }
+      .form-group {
+        flex: 1 1 45%;
+      }
+      .form-group1 {
+        flex: 1 1 30%;
+        background-color: white;
+      }
+      .form-group2 {
+        flex: 1 1 20%;
+      }
+      .form-group3 {
+        flex: 1 1 30%;
+      }
+      .radio-group {
+        display: flex;
+        gap: 20px;
+        margin-top: 8px;
+      }
+      .radio-group label {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+      input[type="file"] {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+        background-color: white;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      .full-width {
+        flex: 1 1 100%;
+      }
+      .buttons {
+        display: flex;
+        gap: 10px;
+      }
+      .buttons input {
+        flex: 1;
+        padding: 10px;
+        background-color: #5aa899;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      .footer {
+        background-color: #5aa899;
+        text-align: center;
+        padding: 10px;
+        color: white;
+      }
+      #lbl {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top-nav">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="side-menu">
+      <h3>Side Menu</h3>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="main">
+      <div class="form-container">
+        <div class="form-header">Contact Us</div>
+        <div id="lbl">
+          If you have any questions, please feel free to contact us using the
+          form below
+        </div>
+        <br />
+        <form action="#" method="post">
+          <fieldset>
+            <div class="form-group">
+              <label>First Name:</label>
+              <input type="text" required />
+            </div>
+            <div class="form-group">
+              <label>Last Name:</label>
+              <input type="text" required />
+            </div>
+            <div class="form-group">
+              <label>Password:</label>
+              <input type="password" required />
+            </div>
+            <div class="form-group">
+              <label>Verify Password:</label>
+              <input type="password" required />
+            </div>
+            <div class="form-group1">
+              <label>Email:</label>
+              <input type="email" required />
+            </div>
+            <div class="form-group1">
+              <label>Phone:</label>
+              <input type="tel" required />
+            </div>
+            <div class="form-group1">
+              <label>Website:</label>
+              <input type="url" />
+            </div>
+            <div class="form-group2">
+              <label>Age:</label>
+              <input type="number" required />
+            </div>
+            <div class="form-group2">
+              <label>Date of Birth:</label>
+              <input type="date" required />
+            </div>
+            <div class="form-group2">
+              <label>Appointment Time:</label>
+              <input type="time" required />
+            </div>
+            <div class="form-group2">
+              <label>Volume:</label>
+              <input type="range" />
+            </div>
+            <div class="form-group3">
+              <label for="gender">Gender:</label>
+              <div class="radio-group">
+                <label
+                  ><input type="radio" name="gender" value="Male" required />
+                  Male</label
+                >
+                <label
+                  ><input type="radio" name="gender" value="Female" required />
+                  Female</label
+                >
+              </div>
+            </div>
+            <div class="form-group3">
+              <label>Hobbies:</label>
+              <div class="radio-group">
+                <label
+                  ><input type="checkbox" name="hobbies" value="Reading" />
+                  Reading</label
+                >
+                <label
+                  ><input type="checkbox" name="hobbies" value="Traveling" />
+                  Traveling</label
+                >
+                <label
+                  ><input type="checkbox" name="hobbies" value="Gaming" />
+                  Gaming</label
+                >
+                <label
+                  ><input type="checkbox" name="hobbies" value="Cooking" />
+                  Cooking</label
+                >
+              </div>
+            </div>
+            <div class="form-group3">
+              <label>Favorite Color:</label>
+              <input type="color" value="#0000ff" style="width: 30px" />
+            </div>
+            <div class="form-group1">
+              <label>Country:</label>
+              <select required>
+                <option value="">Select Country</option>
+                <option>Bangladesh</option>
+                <option>India</option>
+                <option>USA</option>
+                <option>UK</option>
+              </select>
+            </div>
+            <div class="form-group1">
+              <label>Upload File:</label>
+              <input type="file" required />
+            </div>
+            <div class="form-group1">
+              <label>Bio:</label>
+              <textarea rows="3" required></textarea>
+            </div>
+            <div class="full-width buttons">
+              <input type="submit" value="Submit" />
+              <input type="reset" value="Reset" />
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+    <div class="footer">Footer</div>
+  </body>
+</html>
